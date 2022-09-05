@@ -13,6 +13,9 @@ require('dotenv').config({ path: "./config/.env" });
 connectDB();
 //pull in router 
 
-
-
 //middleware 
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
+app.set('view engine', 'ejs')
