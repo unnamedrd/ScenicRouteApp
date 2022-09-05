@@ -14,6 +14,12 @@ const connectDB = async () => {
 
 module.exports = connectDB;
 
+module.exports = {
+  url: process.env.DB_STRING,
+  database: "recipe_app",
+  imgBucket: "photos",
+};
+
 app.listen(process.env.PORT, () => {
   console.log("Server is running, you better catch it!");
 });
